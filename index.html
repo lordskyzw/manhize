@@ -228,63 +228,72 @@
     <!--==========================
       Contact Section
     ============================-->
+    <!-- Registration Form Section -->
     <section id="contact" class="section-bg wow fadeInUp">
-
       <div class="container">
-
         <div class="section-header">
-          <h2>Register</h2>
-          <p>Book your seat.</p>
-        </div>
-
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>xxx, Kwekwe, Zimbabwe</address>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+263xxx</a></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="ion-ios-email-outline"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-          </div>
-
+          <h2>Registration Form</h2>
+          <p>Please register your interest to take part in the conference by filling out the form below, specify the number of people to attend.</p>
         </div>
 
         <div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
           <form action="/your_flask_endpoint" method="post" role="form" class="contactForm">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
+            <h3>Personal Details</h3>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
             </div>
-            <div class="text-center"><button type="submit">Register</button></div>
+            <div class="form-group">
+              <label for="position">Position:</label>
+              <input type="text" class="form-control" name="position" id="position" placeholder="Your Position" required />
+            </div>
+            <div class="form-group">
+              <label for="address">Contact Address:</label>
+              <input type="text" class="form-control" name="address" id="address" placeholder="Contact Address" required />
+            </div>
+
+            <h3>Company Details</h3>
+            <div class="form-group">
+              <label for="company">Company Name:</label>
+              <input type="text" class="form-control" name="company" id="company" placeholder="Company Name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number(s):</label>
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required />
+            </div>
+
+            <h3>Other Delegates Details</h3>
+            <!-- Delegate details fields (replicate as needed) -->
+            <div class="form-group">
+              <label for="delegate1_name">Delegate Name:</label>
+              <input type="text" class="form-control" name="delegate1_name" id="delegate1_name" placeholder="Delegate Name" />
+            </div>
+            <div class="form-group">
+              <label for="delegate1_position">Delegate Position:</label>
+              <input type="text" class="form-control" name="delegate1_position" id="delegate1_position" placeholder="Delegate Position" />
+            </div>
+            <div class="form-group">
+              <label for="delegate1_address">Delegate Contact Address:</label>
+              <input type="text" class="form-control" name="delegate1_address" id="delegate1_address" placeholder="Contact Address" />
+            </div>
+
+            <!-- Add more delegate fields as necessary -->
+
+            <h3>Exhibition Space Required</h3>
+            <div class="form-group">
+              <label for="exhibition_space">Booth or Tent (3mX3m), Open Space (4X3m), Other Space Requirements:</label>
+              <input type="text" class="form-control" name="exhibition_space" id="exhibition_space" placeholder="Specify Space Requirements" />
+            </div>
+
+            <div class="text-center"><button type="submit">Submit Registration</button></div>
           </form>
         </div>
-
       </div>
-    </section><!-- #contact -->
+    </section>
 
   </main>
 
